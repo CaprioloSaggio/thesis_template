@@ -1,0 +1,101 @@
+\chapter{Introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Id interdum velit laoreet id. Cras ornare arcu dui vivamus arcu felis bibendum ut. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Sem nulla pharetra diam sit amet. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Consequat id porta nibh venenatis cras sed felis. Faucibus a pellentesque sit amet porttitor. A pellentesque sit amet porttitor eget dolor morbi. Morbi enim nunc faucibus a pellentesque.
+
+Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Eu lobortis elementum nibh tellus molestie nunc non. Sed blandit libero volutpat sed cras ornare arcu. Integer eget aliquet nibh praesent tristique magna. Hac habitasse platea dictumst vestibulum. Pretium lectus quam id leo. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Euismod elementum nisi quis eleifend quam. Leo in vitae turpis massa sed. Facilisis leo vel fringilla est. Eu turpis egestas pretium aenean pharetra. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Ac auctor augue mauris augue. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies.
+
+Nisl nisi scelerisque eu ultrices vitae auctor. Morbi tristique senectus et netus et. Quam vulputate dignissim suspendisse in est ante in nibh. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Cursus risus at ultrices mi. Mauris augue neque gravida in fermentum. In egestas erat imperdiet sed euismod nisi. Ac feugiat sed lectus vestibulum mattis ullamcorper. Neque ornare aenean euismod elementum. Nibh ipsum consequat nisl vel. Fames ac turpis egestas maecenas. Enim ut sem viverra aliquet eget sit. Libero enim sed faucibus turpis in eu.
+
+%_______________________________________________________________________________________________________
+\section{Sample section} \label{sample_section}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Id interdum velit laoreet id. Cras ornare arcu dui vivamus arcu felis bibendum ut. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Sem nulla pharetra diam sit amet. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Consequat id porta nibh venenatis cras sed felis. Faucibus a pellentesque sit amet porttitor. A pellentesque sit amet porttitor eget dolor morbi. Morbi enim nunc faucibus a pellentesque.
+
+\subsection{Sample subsection}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Id interdum velit laoreet id. Cras ornare arcu dui vivamus arcu felis bibendum ut.
+
+\subsubsection{Sample subsubsection}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Id interdum velit laoreet id. Cras ornare arcu dui vivamus arcu felis bibendum ut.
+
+\paragraph{Sample paragraph}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Id interdum velit laoreet id. Cras ornare arcu dui vivamus arcu felis bibendum ut.
+
+\begin{table}
+    \caption{Sample table}
+    \label{table:snr}
+\begin{center}
+   \begin{tabular}{|p{4cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+   \hline
+     & \multicolumn{2}{C{4cm}|}{Patient A} & \multicolumn{2}{C{4cm}|}{Patient B} \\
+     \cline{2-5}
+     &  \multicolumn{1}{C{2cm}|}{L} &  \multicolumn{1}{C{2cm}|}{R} & \multicolumn{1}{C{2cm}|}{L} & \multicolumn{1}{C{2cm}|}{R} \\
+    \hline
+    Raw & 13.41 & 14.28 & 6.94 & 7.06 \\
+    \hline
+   After denoising and unringing & 21.92 & 22.70 & 7.17 & 7.31 \\
+    \hline
+    After topup and eddy correction & 23.64 & 24.35 & 7.19 & 7.29 \\
+    \hline  
+    After coregistration & 59.08 & 65.15 & 9.03 & 9.02 \\ 
+    \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\newgeometry{left=3cm,bottom=2cm}
+\begin{sidewaystable} 
+    \begin{center}
+    
+    \caption{Sample big rotated table}
+    \label{table:VTAmethods}
+   \begin{tabular}{|p{3cm}|p{5cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+   \hline
+    Method & Description & Electrode & Amplitude & Pulse-Width & Patient Specific & Fiber Diameter & Anisotropy & Scar Tissue\\
+    \hline
+    \cite{McIntyre2003} & Shape and dimension of the volume depend on the \textbf{model of the electrode}, which is fixed, on the \textbf{amplitude of the stimulation} and on \textbf{atlas-derived data} to build a conduction model; the output is obtained by means of thresholding of the second derivative of the potential distribution & yes & yes & no & yes & no & yes & yes\\
+    \hline
+    \cite{Kuncel2008} & Fixed spherical shape, radius determined according to \textbf{stimulation amplitude} & no & yes & no & no & no & no & no\\
+    \hline
+    \cite{madler2012} & Fixed spherical shape, radius dependent on \textbf{stimulation amplitude} and \textbf{impedance at the contacts} & yes & yes & no & no & no & no & no\\
+    \hline
+    \cite{Dembek2017} &  Fixed spherical shape, radius determined according to \textbf{pulse-width} and \textbf{stimulation amplitude} & no & yes & yes & no & no & no & no\\
+    \hline  
+    \cite{Horn2017} & Shape and dimension of the volume depend on the \textbf{model of the electrode}, on the \textbf{amplitude of the stimulation} and on the segmentation of \textbf{patient specific data} to build a conduction model; the output is obtained by thresholding the electric field & yes & yes & yes & yes & yes & no & no\\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\end{sidewaystable}
+\restoregeometry
+
+Example equation:
+\begin{equation} \label{eq:aniso}
+A_m = \frac{1}{N} \sum_{i=1}^{N} A_i
+\end{equation}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{pictures/placeholder.png}
+	\caption{Example figure}
+	\label{fig:dwi}
+\end{figure}
+
+%_______________________________________________________________________________________________________
+\section{Aim of the Project}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies lacus sed turpis tincidunt. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Nunc scelerisque viverra mauris in aliquam sem. Sed libero enim sed faucibus turpis in eu. Cursus eget nunc scelerisque viverra mauris in. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Lorem ipsum dolor sit amet consectetur adipiscing. Amet risus nullam eget felis eget nunc. Bibendum enim facilisis gravida neque convallis a. Pretium fusce id velit ut tortor. Malesuada fames ac turpis egestas sed tempus. Eget nunc lobortis mattis aliquam. Purus semper eget duis at tellus at urna condimentum. Tortor at risus viverra adipiscing at in tellus integer. Felis eget nunc lobortis mattis aliquam. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida.
+
+Example non-ordered list:
+\begin{itemize}
+\item patient-specificity;
+\item inclusion of anisotropy in the conduction model;
+\item accurate modelling of the electrode together with scar tissue; 
+\end{itemize}
+
+%_______________________________________________________________________________________________________
+\section{Thesis Outline}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies lacus sed turpis tincidunt. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Nunc scelerisque viverra mauris in aliquam sem. Sed libero enim sed faucibus turpis in eu. Cursus eget nunc scelerisque viverra mauris in. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Lorem ipsum dolor sit amet consectetur adipiscing. Amet risus nullam eget felis eget nunc. Bibendum enim facilisis gravida neque convallis a. Pretium fusce id velit ut tortor. Malesuada fames ac turpis egestas sed tempus. Eget nunc lobortis mattis aliquam. Purus semper eget duis at tellus at urna condimentum. Tortor at risus viverra adipiscing at in tellus integer. Felis eget nunc lobortis mattis aliquam. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida.
+
+Example ordered list:
+\begin{enumerate}
+\item patient-specificity;
+\item inclusion of anisotropy in the conduction model;
+\item accurate modelling of the electrode together with scar tissue; 
+\end{enumerate}

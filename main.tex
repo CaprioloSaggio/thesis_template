@@ -1,0 +1,137 @@
+\documentclass[11pt,a4paper]{report}
+\pagenumbering{arabic}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage[english]{babel} % document's language
+
+
+\usepackage[backend=bibtex, citestyle=authoryear-comp, sorting=ynt]{biblatex}
+\addbibresource{thesis_template.bib} % export it as biblatex from zotero/mendeley/...
+
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{cleveref}
+\usepackage{scrextend}
+\usepackage{tablefootnote}
+\usepackage{fancyhdr} 
+\usepackage{afterpage}
+\usepackage{geometry}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+}
+
+
+\begin{document}
+
+
+\author{Unknown}
+\date{\today}
+\title{Thesis title}
+\iffalse \date{\vspace{-5ex}} \fi	
+
+
+\include{./src/frontispiece}
+\blankpage
+\addtocounter{page}{-1}
+\thispagestyle{empty} \normalfont %\cleardoublepage
+\include{./src/dedication}
+\thispagestyle{empty}  %\cleardoublepage
+\blankpage
+
+
+
+%__________________________________________________________________________________________________
+\tableofcontents
+\listoffigures
+\listoftables
+%\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+\newpage
+\blankpage
+
+
+%__________________________________________________________________________________________________
+\newpage
+\input{./src/abstract}
+%\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+\newpage
+\blankpage
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\pagestyle{plain}\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}} 
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}         
+\fancyhead[LE,RO]{\bfseries\thepage}    
+                                        
+\fancyhead[RE]{\bfseries\leftmark}    
+\fancyhead[LO]{\bfseries\rightmark}     
+\renewcommand{\headrulewidth}{0.3pt} 
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\input{./src/introduction}
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\newpage
+\input{./src/materials_methods}
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\newpage
+\input{./src/results}
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\newpage
+\input{./src/discussion}
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\newpage
+\input{./src/conclusion}
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\newpage
+\printbibliography
+
+
+%__________________________________________________________________________________________________
+%__________________________________________________________________________________________________
+\appendix
+
+%\pagestyle{fancy} 
+%\fancyfoot{}                                               
+%\renewcommand{\chaptermark}[1]{\markboth{\appendixname\ \thechapter.\ #1}{}} 
+%\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}         
+%\fancyhead[LE,RO]{\bfseries\thepage}    
+%                                        
+%\fancyhead[RE]{\bfseries\leftmark}    
+%\fancyhead[LO]{\bfseries\rightmark}     
+%\renewcommand{\headrulewidth}{0.3pt} 
+
+\include{./src/appendix_a}
+
+
+\end{document}
+
